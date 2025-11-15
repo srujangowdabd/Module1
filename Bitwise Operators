@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class BitwiseOperations {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input two integers
+        System.out.print("Enter first integer: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second integer: ");
+        int b = sc.nextInt();
+
+        // Bitwise operations
+        int andResult = a & b;
+        int orResult = a | b;
+        int xorResult = a ^ b;
+
+        // Printing results in binary
+        System.out.println("\n--- Bitwise Results ---");
+        System.out.println("a in binary   : " + Integer.toBinaryString(a));
+        System.out.println("b in binary   : " + Integer.toBinaryString(b));
+
+        System.out.println("AND (a & b)   : " + Integer.toBinaryString(andResult));
+        System.out.println("OR  (a | b)   : " + Integer.toBinaryString(orResult));
+        System.out.println("XOR (a ^ b)   : " + Integer.toBinaryString(xorResult));
+
+        sc.close();
+    }
+}
