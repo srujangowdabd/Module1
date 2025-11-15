@@ -1,0 +1,42 @@
+class Doctor {
+    void consultationFee() {
+        System.out.println("General doctor consultation fee: ₹300");
+    }
+}
+
+class Dentist extends Doctor {
+    @Override
+    void consultationFee() {
+        System.out.println("Dentist consultation fee: ₹500");
+    }
+}
+
+class Cardiologist extends Doctor {
+    @Override
+    void consultationFee() {
+        System.out.println("Cardiologist consultation fee: ₹800");
+    }
+}
+
+class Surgeon extends Doctor {
+    @Override
+    void consultationFee() {
+        System.out.println("Surgeon consultation fee: ₹1200");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Doctor d;
+
+        d = new Dentist();
+        d.consultationFee();
+
+        d = new Cardiologist();
+        d.consultationFee();
+
+        d = new Surgeon();
+        d.consultationFee();
+    }
+}
