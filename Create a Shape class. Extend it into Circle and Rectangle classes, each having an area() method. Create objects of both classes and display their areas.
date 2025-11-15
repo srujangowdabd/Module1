@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+class Shape {
+    void displayShape() {
+        System.out.println("This is a shape.");
+    }
+}
+
+class Circle extends Shape {
+    double radius;
+
+    void area() {
+        double area = Math.PI * radius * radius;
+        System.out.println("Area of Circle: " + area);
+    }
+}
+
+class Rectangle extends Shape {
+    double length, width;
+
+    void area() {
+        double area = length * width;
+        System.out.println("Area of Rectangle: " + area);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Circle object
+        Circle c = new Circle();
+        c.displayShape();
+        System.out.print("Enter radius of circle: ");
+        c.radius = sc.nextDouble();
+        c.area();
+
+        System.out.println();
+
+        // Rectangle object
+        Rectangle r = new Rectangle();
+        r.displayShape();
+        System.out.print("Enter length of rectangle: ");
+        r.length = sc.nextDouble();
+        
+        System.out.print("Enter width of rectangle: ");
+        r.width = sc.nextDouble();
+        r.area();
+
+        sc.close();
+    }
+}
